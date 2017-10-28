@@ -1,13 +1,21 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router';
+import routes from './routes';
+import Container from './components/Container.vue';
 
-import HelloComponent from './components/Hello.vue';
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes
+});
 
 new Vue({
   el: '#app',
   components: {
-    hello: HelloComponent
+    container: Container
   },
+  router,
   render() {
-    return <hello />;
+    return <container />;
   }
 });

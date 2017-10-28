@@ -1,3 +1,3 @@
 <template>
-  <h1>Django + Vue :)</h1>
+  <p>Hello Component</p>
 </template>
