@@ -1,16 +1,18 @@
 <template>
-  <div class="container">
-    <h1>{{ message }}</h1>
-    <router-view></router-view>
+  <div class="wrapper">
+    <header class="mb-5">
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand logo" href="#">Wiki</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        message: 'Django + Vue application :)'
-      }
-    }
-  }
-</script>
+<style lang="scss">
+  @import "../assets/sass/common";
+</style>

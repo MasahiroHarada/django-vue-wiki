@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  font-size: 14px;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
