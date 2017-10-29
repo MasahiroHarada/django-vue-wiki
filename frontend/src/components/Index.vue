@@ -3,7 +3,7 @@
     <header class="mb-5">
       <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand logo" href="#">Wiki</a>
+          <router-link :to="{name: 'folderIndex'}" class="navbar-brand logo">Wiki</router-link>
         </div>
       </nav>
     </header>

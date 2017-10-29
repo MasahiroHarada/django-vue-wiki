@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
-import Container from './components/Container.vue';
+import Index from './components/Index.vue';
 
 Vue.use(VueRouter);
 
@@ -12,10 +12,10 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   components: {
-    container: Container
+    index: Index
   },
   router,
   render() {
-    return <container />;
+    return <index />;
   }
 });

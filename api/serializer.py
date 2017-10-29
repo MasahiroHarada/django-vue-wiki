@@ -5,7 +5,6 @@ from .markdowner import to_html
 
 class PageSerializer(serializers.ModelSerializer):
     uuid = serializers.CharField(read_only=True)
-    body = serializers.CharField(write_only=True)
     html = serializers.SerializerMethodField(read_only=True)
     folder_name = serializers.SerializerMethodField(read_only=True)
     folder_pages = serializers.SerializerMethodField(read_only=True)
