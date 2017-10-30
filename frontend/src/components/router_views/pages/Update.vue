@@ -23,8 +23,12 @@
         <div v-else>
           <h1 class="page-title">ページの編集</h1>
           <hr>
-          <p class="text-right">
-            <a href="#" target="_blank" class="btn btn-light text-dark">
+          <p class="d-flex justify-content-between">
+            <router-link :to="{name: 'pageShow', params: {page_id}}" class="btn btn-light text-dark">
+              <i class="fa fa-angle-left mr-2"></i>Back
+            </router-link>
+            <a href="http://kojika17.com/2013/01/starting-markdown.html" target="_blank"
+               class="btn btn-light text-dark">
               <i class="fa fa-question-circle-o mr-2"></i>Markdown
             </a>
           </p>
@@ -69,7 +73,7 @@
           this.content = response.data.body;
         } catch (e) {
           this.errors = true;
-          console.error(e);
+          this.$emit('error', e);
         }
       },
       onPreview() {
@@ -88,7 +92,7 @@
           this.$router.push({name: 'pageShow', params: {page_id: response.data.uuid}})
         } catch (e) {
           this.errors = true;
-          console.error(e);
+          this.$emit('error', e);
         }
       }
     },

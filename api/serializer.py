@@ -30,9 +30,18 @@ class PageSerializer(serializers.ModelSerializer):
         return instance
 
 
+class PageListingField(serializers.RelatedField):
+    def to_internal_value(self, data):
+        pass
+
+    def to_representation(self, value):
+        return {'uuid': value.uuid, 'title': value.title}
+
+
 class FolderSerializer(serializers.ModelSerializer):
     uuid = serializers.CharField(read_only=True)
+    pages = PageListingField(many=True, read_only=True)
 
     class Meta:
         model = Folder
-        fields = ('uuid', 'name', 'updated_at')
+        fields = ('uuid', 'name', 'updated_at', 'pages')

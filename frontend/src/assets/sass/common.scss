@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:900");
+@import url("https://fonts.googleapis.com/css?family=Palanquin|Inconsolata|Montserrat:900");
 
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~highlight.js/styles/foundation.css";
+@import "~highlight.js/styles/github.css";
 
 html {
   font-size: 14px;
 }
 
 .logo {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", $font-family-sans-serif;
 }
 
 .page-title {

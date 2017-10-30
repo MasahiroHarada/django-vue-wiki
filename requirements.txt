@@ -1,0 +1,13 @@
+bleach==2.1.1
+Django==1.11.6
+django-filter==1.1.0
+djangorestframework==3.7.1
+djangorestframework-jwt==1.11.0
+html5lib==1.0b10
+Markdown==2.6.9
+psycopg2==2.7.3.2
+PyJWT==1.5.3
+pytz==2017.2
+six==1.11.0
+webencodings==0.5.1
+whitenoise==3.3.1

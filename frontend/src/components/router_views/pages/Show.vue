@@ -4,7 +4,11 @@
       <div class="col-lg-9">
         <h1 class="page-title">{{ page.title }}</h1>
         <hr>
-        <p class="text-right">
+        <p class="d-flex justify-content-between">
+          <router-link :to="{name: 'folderShow', params: {folder_id: page.folder_field}}"
+                       class="btn btn-light text-dark">
+            <i class="fa fa-angle-left mr-2"></i>Back
+          </router-link>
           <router-link :to="{name: 'pageUpdate', params: {page_id: page.uuid}}"
                        class="btn btn-light">
             <i class="fa fa-pencil"></i>
@@ -46,7 +50,7 @@
           const response = await fetchPageAPI(this.page_id);
           this.page = response.data;
         } catch (e) {
-          //
+          this.$emit('error', e);
         }
       }
     },

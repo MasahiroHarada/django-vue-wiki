@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "watch": "./node_modules/.bin/poi watch"
+    "watch": "./node_modules/.bin/poi watch",
+    "build": "./node_modules/.bin/poi build",
+    "dev-build": "./node_modules/.bin/poi"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",
