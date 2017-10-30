@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'h=n44hj9u*5u%0@3fyfba7nq-kv@!m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dj-vue-wiki.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
