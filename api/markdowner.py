@@ -9,7 +9,8 @@ def to_html(md_text):
         'h1', 'h2', 'h3',
         'p',
         'table', 'thead', 'tbody', 'tr', 'th', 'td',
-        'pre', 'code'
+        'pre', 'code',
+        'br'
     ]
 
     def deny_javascript(tag, name, value):
