@@ -23,7 +23,7 @@
 
 <script>
   import { loginAPI } from '../../api';
-  import token from '../../token';
+  import auth from '../../auth';
 
   export default {
     data() {
@@ -41,8 +41,8 @@
             password: this.password
           });
           const jwtToken = response.data.token;
-          token.store(jwtToken);
-          this.$router.push({name: 'folderIndex'});
+          const nextRoute = auth.login(jwtToken);
+          this.$router.push(nextRoute);
         } catch (e) {
           console.error(e);
           this.errors = true;

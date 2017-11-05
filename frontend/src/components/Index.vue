@@ -18,13 +18,15 @@
 </style>
 
 <script>
-  import token from '../token';
+  import auth from '../auth';
 
   export default {
     methods: {
       onError(e) {
+        console.error(e);
         if (e.response && e.response.status === 401) {
-          token.remove();
+          auth.rememberUrl(this.$route.path);
+          auth.logout();
           this.$router.push({name: 'login'});
         }
       }

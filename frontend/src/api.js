@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const FOLDER_URL = '/api/folders/';
 const PAGE_URL = '/api/pages/';
-const LOGIN_URL = '/jwt-token';
+const LOGIN_URL = '/jwt-auth';
 
 export function fetchAllFoldersAPI() {
   return axios.get(FOLDER_URL);
